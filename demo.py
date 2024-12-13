@@ -4,12 +4,23 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
 # 设置全局属性
 st.set_page_config(
     page_title='我是标题',
     page_icon=' ',
     layout='wide'
 )
+
+sysmenu = '''
+<style>
+#root > div:nth-child(1) > div.withScreencast > div > header > div.stAppToolbar.st-emotion-cache-15ecox0.ezrtsby0 > div.stAppDeployButton {visibility:hidden;}
+#MainMenu {visibility:hidden;}
+footer {visibility:hidden;}
+</style>
+'''
+# 加载系统菜单隐藏
+st.markdown(sysmenu,unsafe_allow_html=True)
 
 sidebar = st.sidebar
 sidebar.title('欢迎来到我的应用')
